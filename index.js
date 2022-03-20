@@ -1,6 +1,7 @@
 function fetchBooks() {
   return fetch("https://anapioficeandfire.com/api/books")
     .then((resp)=> resp.json())
+    .then((data)=> renderBooks(data))
 
     // is using a return function here proper? or should it be...
 
@@ -24,6 +25,5 @@ function renderBooks(books) {
 
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks();
-  // call renderBooks here but using what as input ?
-});
+}); 
 
