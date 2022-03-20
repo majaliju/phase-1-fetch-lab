@@ -2,16 +2,6 @@ function fetchBooks() {
   return fetch("https://anapioficeandfire.com/api/books")
     .then((resp)=> resp.json())
     .then((data)=> renderBooks(data))
-
-    // is using a return function here proper? or should it be...
-
-    /* 
-    fetch("https://anapioficeandfire.com/api/books")
-    .then((resp)=> resp.json())
-    return json 
-    */
-
-  
 }
 
 function renderBooks(books) {
